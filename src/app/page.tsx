@@ -1,25 +1,42 @@
+"use client";
+
 import { Button, Input, Card, Badge, Spinner } from "@/ui";
 
 export default function Home() {
   return (
-    <main className="p-8 space-y-6">
-      <Card>
-        <h1 className="text-2xl font-bold mb-4">Test UI Library</h1>
-        <Input placeholder="Type something..." />
-        <div className="space-x-2 mt-4">
-          <Button variant="default">Default</Button>
-          <Button variant="outline">Outline</Button>
-          <Button variant="ghost">Ghost</Button>
-        </div>
-        <div className="mt-4 space-x-2">
-          <Badge variant="default">Default</Badge>
-          <Badge variant="success">Success</Badge>
-          <Badge variant="error">Error</Badge>
-        </div>
-        <div className="mt-4">
+    <main className="min-h-screen p-8 bg-white">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6">
+        {/* Large Input Card */}
+        <Card className="p-4 col-span-1 sm:col-span-2 lg:col-span-4 transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+          <h2 className="font-semibold mb-2">Input</h2>
+          <Input placeholder="Type something..." />
+        </Card>
+
+        {/* Tall Spinner */}
+        <Card className="p-4 col-span-1 sm:col-span-1 row-span-2 transition-transform duration-300 hover:scale-105 hover:shadow-xl flex justify-center items-center">
           <Spinner />
-        </div>
-      </Card>
+        </Card>
+
+        {/* Compact Buttons */}
+        <Card className="p-4 col-span-1 sm:col-span-1 lg:col-span-2 transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+          <h2 className="font-semibold mb-2">Buttons</h2>
+          <div className="flex gap-2 flex-wrap">
+            <Button variant="default">Default</Button>
+            <Button variant="outline">Outline</Button>
+            <Button variant="ghost">Ghost</Button>
+          </div>
+        </Card>
+
+        {/* Wide Badge Section */}
+        <Card className="p-4 col-span-1 sm:col-span-2 lg:col-span-3 transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+          <h2 className="font-semibold mb-2">Badges</h2>
+          <div className="flex gap-2 flex-wrap">
+            <Badge variant="default">default</Badge>
+            <Badge variant="success">success</Badge>
+            <Badge variant="error">error</Badge>
+          </div>
+        </Card>
+      </div>
     </main>
   );
 }
