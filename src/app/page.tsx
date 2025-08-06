@@ -44,7 +44,7 @@ export default function Home() {
         </section>
 
         <section>
-          <h2 className="font-bold font-mono text-xl mb-4"> Form Component</h2>
+          <h2 className="font-bold font-mono text-xl mb-4"> Form</h2>
           <Card className="p-6">
             <Form
               title="📨 Contact Us"
