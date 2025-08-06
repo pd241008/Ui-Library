@@ -1,6 +1,8 @@
 import "./globals.css";
 import { Space_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import type { Metadata } from "next";
+import { Navbar } from "@/ui/navbar/NavBar";
+import { Sidebar } from "@/ui/sidebar/SideBar";
 
 const grotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -26,11 +28,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${grotesk.variable} ${plexMono.variable}`}>
-      <body className="bg-neutral-light text-black font-sans min-h-screen p-8 border-4 border-black">
-        <main className="max-w-4xl mx-auto bg-white rounded-lg border-2 border-black shadow-[8px_8px_0px_black] p-6">
-          {children}
-        </main>
+      <body className="bg-neutral-light text-black font-plex min-h-screen">
+        {/* Fixed Navbar */}
+        <Navbar />
+
+        {/* Flex container with Sidebar and Page */}
+        <div className="flex pt-[56px]"> {/* 56px matches navbar height */}
+          <Sidebar />
+          <main className="ml-64 w-full p-8">
+            <div className="bg-white rounded-lg border-2 border-black shadow-[8px_8px_0px_black] p-6 max-w-4xl">
+              {children}
+            </div>
+          </main>
+        </div>
       </body>
     </html>
   );
 }
+
