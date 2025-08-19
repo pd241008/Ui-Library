@@ -32,7 +32,7 @@ export const DocsLayout = ({ children, currentSection }: DocsLayoutProps) => {
           <div className="flex items-center gap-4">
             <Button
               variant="ghost"
-              size="icon"
+           
               onClick={() => setSidebarOpen(!sidebarOpen)}
               className="md:hidden"
             >
@@ -47,7 +47,7 @@ export const DocsLayout = ({ children, currentSection }: DocsLayoutProps) => {
           </div>
           
           <div className="flex items-center gap-2">
-            <Button variant="ghost" size="icon" onClick={toggleDarkMode}>
+            <Button variant="ghost"  onClick={toggleDarkMode}>
               {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Button>
           </div>
