@@ -8,6 +8,9 @@ export const content = [
 ];
 export const theme = {
   extend: {
+     rotate: {
+        'y-180': 'rotateY(180deg)',
+      },
     fontFamily: {
       sans: ["'Space Grotesk'", ..._fontFamily.sans],
       mono: ["'IBM Plex Mono'", ..._fontFamily.mono],
@@ -16,7 +19,9 @@ export const theme = {
       primary: {
         DEFAULT: "#3B82F6",
         dark: "#1D4ED8",
-        light: "#BFDBFE",
+        light: "#e0e5ec",
+        primary: "#0077ff",
+
       },
       neutral: {
         DEFAULT: "#E5E7EB",
@@ -31,5 +36,6 @@ export const theme = {
       lg: "0.375rem",
     },
   },
+
 };
 export const plugins = [];
